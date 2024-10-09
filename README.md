@@ -17,13 +17,20 @@ Snake like player mechanics and Pacman-type levels. Collect fruits and powerups 
 * Raylib Graphics Library
 * Cmake
 
+### Installing
+
+* Run "cmake --build ." in /build
+
+```
+cmake --build .
+```
 
 ### Executing program
 
-* Pre-packaged Linux exe in /src
-* Run 'cmake --build .' in /build
+* Run ./cnake_man in /build
+
 ```
-cmake --build .
+./cnake_man
 ```
 
 ## Help
