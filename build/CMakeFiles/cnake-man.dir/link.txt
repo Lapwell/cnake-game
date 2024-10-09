@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -O2 -pedantic -Wextra -Wshadow -g -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 "CMakeFiles/cnake-man.dir/src/main.c.o" "CMakeFiles/cnake-man.dir/src/level_loader.c.o" "CMakeFiles/cnake-man.dir/src/traverse_level.c.o" -o cnake-man  /home/lapwell/Projects/C/cnake-game/lib/libraylib.a

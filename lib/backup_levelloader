@@ -1,0 +1,89 @@
+#include "../include/level_loader.h"
+#include "raylib.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+// Some common defines
+#define ROWS 32
+#define COLS 32
+#define TILE_S 32
+
+// Defines for all the different tile types 
+#define WALL '#'
+#define PLAYER '@'
+#define HAZARD '&'
+#define EXIT '^'
+#define FRUIT '$'
+#define POWERUP '%'
+#define ENEMY '!'
+
+void print_level(char level[ROWS][COLS]) {
+  for (int i = 0; i < ROWS; i++) {
+    for (int j = 0; j < COLS; j++) {
+      printf("%c", level[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+char load_file(const char *file_name, char raw_level[ROWS][COLS]) {
+  FILE *file;
+  int row = 0;
+  char buffer[35];
+  file = fopen(file_name, "r");
+  if (file == NULL) {
+    printf("\nUnable open file\n");
+    exit(1);
+  }
+  while (fgets(buffer, sizeof(buffer), file)) {
+    for (size_t col = 0; col < sizeof(buffer); col++) {
+      if (buffer[col] == '|' || buffer[col] == '\n' || buffer[col] == '\t') {
+        continue;
+      }
+      raw_level[row][col] = buffer[col];
+    }
+    row++;
+  }
+  if (row > ROWS) {
+    fclose(file);
+    exit(1);
+  }
+  fclose(file);
+  return **raw_level;
+}
+
+Tile generate_level(const char *file_name, Tile parsed_level[ROWS][COLS]) {
+  char raw_level[ROWS][COLS];
+  load_file(file_name, raw_level);
+  for (int r = 0; r < ROWS; r++) {
+    for (int c = 0; c < COLS; c++) {
+      switch (raw_level[r][c]) {
+        case WALL:
+          parsed_level[r][c] = (Tile){{0, 0, TILE_S, TILE_S}, WALL};
+          break;
+        case PLAYER:
+          parsed_level[r][c] = (Tile){{0, 0, TILE_S, TILE_S}, PLAYER};
+          break;
+        case POWERUP:
+          parsed_level[r][c] = (Tile){{0, 0, TILE_S, TILE_S}, POWERUP};
+          break;
+        case ENEMY:
+          parsed_level[r][c] = (Tile){{0, 0, TILE_S, TILE_S}, ENEMY};
+          break;
+        case EXIT:
+          parsed_level[r][c] = (Tile){{0, 0, TILE_S, TILE_S}, EXIT};
+          break;
+        case FRUIT:
+          parsed_level[r][c] = (Tile){{0, 0, TILE_S, TILE_S}, FRUIT};
+          break;
+      }
+    }
+  }
+  return **parsed_level;
+}
+
+//int main() {
+//  Tile parsed_level[ROWS][COLS];
+//  generate_level("../levels/level1.txt", parsed_level);
+//}
+

@@ -1,0 +1,3 @@
+/home/lapwell/Projects/C/cnake-game/build/CMakeFiles/cnake-man.dir
+/home/lapwell/Projects/C/cnake-game/build/CMakeFiles/edit_cache.dir
+/home/lapwell/Projects/C/cnake-game/build/CMakeFiles/rebuild_cache.dir

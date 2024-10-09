@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/lapwell/Projects/C/cnake-game/build",
+  "command": "/usr/bin/cc  -I/home/lapwell/Projects/C/cnake-game/include  -Wall -O2 -pedantic -Wextra -Wshadow -g -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 -std=c2x -o CMakeFiles/cnake-man.dir/src/main.c.o -c /home/lapwell/Projects/C/cnake-game/src/main.c",
+  "file": "/home/lapwell/Projects/C/cnake-game/src/main.c",
+  "output": "CMakeFiles/cnake-man.dir/src/main.c.o"
+},
+{
+  "directory": "/home/lapwell/Projects/C/cnake-game/build",
+  "command": "/usr/bin/cc  -I/home/lapwell/Projects/C/cnake-game/include  -Wall -O2 -pedantic -Wextra -Wshadow -g -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 -std=c2x -o CMakeFiles/cnake-man.dir/src/level_loader.c.o -c /home/lapwell/Projects/C/cnake-game/src/level_loader.c",
+  "file": "/home/lapwell/Projects/C/cnake-game/src/level_loader.c",
+  "output": "CMakeFiles/cnake-man.dir/src/level_loader.c.o"
+},
+{
+  "directory": "/home/lapwell/Projects/C/cnake-game/build",
+  "command": "/usr/bin/cc  -I/home/lapwell/Projects/C/cnake-game/include  -Wall -O2 -pedantic -Wextra -Wshadow -g -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 -std=c2x -o CMakeFiles/cnake-man.dir/src/traverse_level.c.o -c /home/lapwell/Projects/C/cnake-game/src/traverse_level.c",
+  "file": "/home/lapwell/Projects/C/cnake-game/src/traverse_level.c",
+  "output": "CMakeFiles/cnake-man.dir/src/traverse_level.c.o"
+}
+]
