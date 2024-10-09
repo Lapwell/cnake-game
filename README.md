@@ -2,10 +2,12 @@
 
 A project to learn C. Based on classic snake with Pacman inspired levels.
 
+
 ## Description
 
 A C project using Raylib to learn game development and the C programming language.
 Snake like player mechanics and Pacman-type levels. Collect fruits and powerups to complete levels while avoiding hazards.
+
 
 ## Getting Started
 
@@ -15,10 +17,6 @@ Snake like player mechanics and Pacman-type levels. Collect fruits and powerups 
 * Raylib Graphics Library
 * Cmake
 
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
 
 ### Executing program
 
