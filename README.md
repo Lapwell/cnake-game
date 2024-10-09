@@ -1,6 +1,6 @@
 # Cnake Man
 
-A project to learn C. Based on classic snake with pacman insipried levels.
+A project to learn C. Based on classic snake with Pacman insipried levels.
 
 ## Description
 
